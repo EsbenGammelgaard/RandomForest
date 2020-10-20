@@ -7,24 +7,28 @@ The database used in all three examples is the MNIST database of handwritten dig
 In these examples the more conviniet .CSV file created by Joseph Redmon is used. It can be downloadet from: https://pjreddie.com/media/files/mnist_train.csv.
 
 #### Experiment Setup
+The goal is to use the random forrest algorithm to classify the digits in the 10 different classes ranging from 0 to 9. The split between training and test is 50/50. Amount of observations included is 100 training and 1000 test, with the number of trees, ntree-value, being 5.
 
 ## RStudio Results
+#### Confusion Matrix
+| Prediction / Reference | 0  | 1  | 2  | 3  | 4  | 5  | 6  | 7  | 8  | 9  |
+|------------------------|----|----|----|----|----|----|----|----|----|----|
+| 0                      | 82 | 0  | 2  | 2  | 0  | 4  | 1  | 0  | 1  | 1  |
+| 1                      | 0  | 89 | 1  | 0  | 1  | 0  | 0  | 3  | 10 | 0  |
+| 2                      | 2  | 5  | 65 | 0  | 5  | 5  | 3  | 5  | 5  | 4  |
+| 3                      | 3  | 0  | 8  | 57 | 1  | 15 | 1  | 3  | 5  | 5  |
+| 4                      | 1  | 4  | 3  | 5  | 68 | 5  | 2  | 1  | 2  | 18 |
+| 5                      | 4  | 1  | 1  | 13 | 8  | 47 | 4  | 3  | 6  | 2  |
+| 6                      | 2  | 2  | 4  | 2  | 6  | 4  | 84 | 1  | 0  | 1  |
+| 7                      | 0  | 0  | 5  | 6  | 6  | 3  | 0  | 82 | 2  | 3  |
+| 8                      | 2  | 2  | 7  | 12 | 2  | 5  | 4  | 1  | 49 | 1  |
+| 9                      | 1  | 0  | 1  | 6  | 12 | 1  | 2  | 7  | 0  | 80 |
+
 #### Accuracy
-| Observations | Ntree = 1 | Ntree = 3 | Ntree = 5 | Ntree = 10 | Ntree = 20 |
-|--------------|-----------|-----------|-----------|------------|------------|
-| 1000         |      0.52 |      0.51 |      0.60 |       0.73 |       0.76 |
-| 2000         |      0.52 |      0.62 |      0.72 |       0.80 |       0.84 |
-| 3000         |      0.61 |      0.72 |      0.78 |       0.84 |       0.88 |
-| 4000         |      0.66 |      0.74 |      0.79 |       0.85 |       0.88 |
+The aquired accuracy was 0.70
 
 #### Computational Time [S]
-
-| Observations | Ntree = 1 | Ntree = 3 | Ntree = 5 | Ntree = 10 | Ntree = 20 |
-|--------------|-----------|-----------|-----------|------------|------------|
-| 1000         |      0.41 |      0.31 |      0.35 |       0.42 |       0.66 |
-| 2000         |      0.39 |      0.44 |      0.49 |       0.68 |       1.20 |
-| 3000         |      0.45 |      0.53 |      0.66 |       1.00 |       1.66 |
-| 4000         |      0.63 |      0.65 |      0.86 |       1.38 |       2.34 |
+The computational time was 0.68 seconds.
 
 ## Python Results
 #### Accuracy
