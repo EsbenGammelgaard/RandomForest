@@ -7,7 +7,7 @@ The database used in all three examples is the MNIST database of handwritten dig
 In these examples the more conviniet .CSV file created by Joseph Redmon is used. It can be downloadet from: https://pjreddie.com/media/files/mnist_train.csv.
 
 #### Experiment Setup
-The goal is to use the random forrest algorithm to classify the digits in the 10 different classes ranging from 0 to 9. The split between training and test is 50/50. Amount of observations included is 100 training and 1000 test, with the number of trees, ntree-value, being 5.
+The goal is to use the random forrest algorithm to classify the digits in the 10 different classes ranging from 0 to 9. The split between training and test is 50/50. Amount of observations included is 1000 training and 1000 test, with the number of trees, ntree-value, being 5.
 
 ## RStudio Results
 #### Confusion Matrix
